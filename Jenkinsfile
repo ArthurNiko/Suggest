@@ -9,6 +9,14 @@ pipeline {
                 sh "mvn verify"
             }
         }
+        stage('Deploy'){
+            when {
+                branch 'master'
+            }
+            steps {
+                sh "mvn deploy -s /settings.xml"
+            }
+        }
         stage('Release'){
             when {
                 branch 'release/*'
