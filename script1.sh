@@ -10,4 +10,4 @@ newdigit=$((lastdigit+1))
 git tag -a "${branchtag}.${newdigit}" -m "Release tag ${branchtag}.${newdigit}"
 mvn versions:set -DnewVersion=${branchtag}"."${newdigit}
 mvn deploy -s /settings.xml
-git push --tags
+git push http://${GIT_USER}:${GIT_PASS}@gitlab/root/suggest --tags
