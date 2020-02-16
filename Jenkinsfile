@@ -12,8 +12,8 @@ pipeline {
                 branch 'release/*'
             }
             steps {
-                sh "chmod +x script1.sh"
-                sh "./script1.sh"
+                // sh "chmod +x script1.sh"
+                sh "sh script1.sh"
              }
         }
         stage('Production'){
