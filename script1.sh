@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 branchtag=$(${BRANCH_NAME} | cut -f2 -d/)
 echo "${branchtag}"
