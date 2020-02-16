@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven-Tools'
+    }
     parameters {
         string defaultValue: '1.0', description: '', name: 'version', trim: false
     }
