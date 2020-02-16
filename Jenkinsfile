@@ -3,9 +3,6 @@ pipeline {
     tools {
         maven 'Maven-Tool'
     }
-    parameters {
-        string defaultValue: '1.0', description: '', name: 'version', trim: false
-    }
     stages {
         stage('Production'){
             steps {
