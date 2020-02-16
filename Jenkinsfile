@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Release'){
             when {
-                branch 'release'
+                branch 'release/*'
             }
             steps {
                 sh "chmod +x script1.sh"
